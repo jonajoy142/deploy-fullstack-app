@@ -1,0 +1,181 @@
+:root {
+  color: #1d2433;
+  background: #f5f7fb;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 6px;
+  background: #246bfe;
+  color: white;
+  cursor: pointer;
+  padding: 0.72rem 1rem;
+}
+
+button:hover {
+  background: #164ecc;
+}
+
+.page {
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 32px 20px;
+}
+
+.topbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  color: #59667d;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.apiBase {
+  color: #66748c;
+  margin: 12px 0 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1;
+  margin: 0;
+}
+
+.metrics {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 24px;
+}
+
+.metric,
+.workspace,
+.task,
+.error {
+  background: white;
+  border: 1px solid #dbe2ef;
+  border-radius: 8px;
+}
+
+.metric {
+  padding: 18px;
+}
+
+.metric span {
+  color: #66748c;
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.metric strong {
+  font-size: 1.45rem;
+}
+
+.workspace {
+  padding: 18px;
+}
+
+.composer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.composer input {
+  border: 1px solid #cfd8e8;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 0;
+  padding: 0.75rem 0.9rem;
+}
+
+.taskList {
+  display: grid;
+  gap: 12px;
+}
+
+.task {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+}
+
+.task h2 {
+  font-size: 1.05rem;
+  margin: 8px 0 4px;
+}
+
+.task p {
+  color: #59667d;
+  margin: 0;
+}
+
+.status {
+  border-radius: 999px;
+  color: white;
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.22rem 0.55rem;
+  text-transform: uppercase;
+}
+
+.queued {
+  background: #7a5af8;
+}
+
+.running {
+  background: #d97706;
+}
+
+.done {
+  background: #15803d;
+}
+
+.error {
+  border-color: #fecaca;
+  color: #b91c1c;
+  margin-bottom: 16px;
+  padding: 14px 16px;
+}
+
+@media (max-width: 760px) {
+  .topbar,
+  .task,
+  .composer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
